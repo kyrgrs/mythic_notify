@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.error::before,
+.inform::before,
+.success::before {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-weight: 900;
+    max-width: 20px;
+}
+
+body {
+    background-color: transparent !important;
+}
+
+.notification,
+.template {
+    display: none;
+}
+
+.notif-container {
+    max-width: fit-content;
+    position: absolute;
+    left: 1.2%;
+    top: 31%;
+}
+
+.notification {
+    padding: 12px 12px 12px 30px;
+    width: fit-content;
+    margin-bottom: 18px;
+    font: caption;
+    font-size: 14px;
+    font-family: Poppins, sans-serif;
+    border-radius: 3px;
+    animation: anim2 ease .7s;
+}
+
+.success::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    background:#1fc919;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15PX;
+    text-align: center;
+    box-shadow: 0 0 30px -3px #000;
+    animation: anim ease .7s;
+}
+
+.inform::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0f3";
+    background:#000;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15PX;
+    text-align: center;
+    box-shadow: 0 0 30px -5px rgba(153, 153, 153, 0.334);
+    animation: anim ease .7s;
+}
+
+.error::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f071";
+    background:#721f21;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15PX;
+    text-align: center;
+    box-shadow: 0 0 30px -3px #000;
+    animation: anim ease .7s;
+}
+
+.success {
+    background: #1aa915;
+    color: #fff;
+    position: relative;
+}
+.inform {
+    background: rgb(21, 21, 21);
+    color: #fff;
+    position: relative;
+}
+.error {
+    background: #681618;
+    color: #fff;
+    position: relative;
+}
+
+@keyframes anim{
+    from{
+        left: -80px;
+    }
+    to{
+        left: -15PX;
+    }
+}
+
+@keyframes anim2{
+    from{
+        padding: 12px 12px 12px 10px;
+    }
+    to{
+        padding: 12px 12px 12px 30px;
+    }
+}
